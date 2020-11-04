@@ -1,4 +1,4 @@
-let salarioBruto = 3000;
+let salarioBruto = 6000;
 let salarioBase;
 let aliqInss8 = salarioBruto * 0.08;
 let aliqInss9 = salarioBruto * 0.09;
