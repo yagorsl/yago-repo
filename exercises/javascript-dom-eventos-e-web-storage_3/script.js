@@ -32,3 +32,36 @@ function createDaysOfMonth(){
     }
 }
 createDaysOfMonth()
+
+// Requisito 2
+function createButton(nome, id) {
+    const buttonContainer = document.querySelector(".buttons-container");
+    const button = document.createElement("button");
+
+    button.innerText = nome;
+    button.id = id;
+
+    buttonContainer.appendChild(button);
+}
+createButton("Feriados", "btn-holiday");
+
+// Requisito 3
+function changeColorOfHolidays(){
+    const backgroundColor = "rgb(238,238,238)";
+    const button = document.querySelector('#btn-holiday');
+    const holidays = document.querySelector(".holiday");
+
+    button.addEventListener("click", changeColor);
+    function changeColor(){
+        for (let index =0; index < holidays.length; index += 1){
+            if (holidays[index].style.backgroundColor === "white")
+                holidays[index].style.backgroundColor = "green";
+                else
+                holidays[index].style.backgroundColor = "white";
+        }
+    }
+}
+changeColorOfHolidays();
+
+//Requisito 4
+createButton("Sexta-feira", "btn-frriday");
