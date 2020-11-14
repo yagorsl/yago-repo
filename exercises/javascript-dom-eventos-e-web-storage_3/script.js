@@ -82,3 +82,30 @@ function clickFriday(){
     }
 }
 clickFriday();
+
+// Requisito 6
+const days = document.querySelector("#days");
+function dayMouseOver() {
+    days.addEventListener("mouseover", function (event) {
+        event.target.style.fontSize = "28px";
+        event.target.style.fontWeight = "bold";
+    });
+}
+dayMouseOver();
+
+function dayMouseOut() {
+    days.addEventListener("mouseout", function(event) {
+        event.target.style.fontSize = "20px";
+        event.target.style.fontWeight = "normal"; 
+    });
+}
+dayMouseOut();
+
+// Requisito 7
+function addTaskSpan(taskName) {
+    const taskContainer = document.querySelector(".my-tasks");
+    const newTask = document.createElement("span");
+    newTask.innerText = taskName;
+    taskContainer.appendChild(newTask);
+}
+addTaskSpan("resolver exerc 6 ao 10");
