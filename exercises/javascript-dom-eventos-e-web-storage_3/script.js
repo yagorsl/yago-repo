@@ -102,10 +102,19 @@ function dayMouseOut() {
 dayMouseOut();
 
 // Requisito 7
+const taskContainer = document.querySelector(".my-tasks");
 function addTaskSpan(taskName) {
-    const taskContainer = document.querySelector(".my-tasks");
     const newTask = document.createElement("span");
     newTask.innerText = taskName;
     taskContainer.appendChild(newTask);
 }
 addTaskSpan("resolver exerc 6 ao 10");
+
+// Requisito 8
+function addTaskLegend(color){
+    const divLegend = document.createElement("div");
+    divLegend.className = "task";
+    divLegend.style.backgroundColor = color;
+    taskContainer.appendChild(divLegend);
+}
+addTaskLegend("green");
