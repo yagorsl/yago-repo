@@ -85,6 +85,7 @@ clickFriday();
 
 // Requisito 6
 const days = document.querySelector("#days");
+
 function dayMouseOver() {
     days.addEventListener("mouseover", function (event) {
         event.target.style.fontSize = "28px";
@@ -103,6 +104,7 @@ dayMouseOut();
 
 // Requisito 7
 const taskContainer = document.querySelector(".my-tasks");
+
 function addTaskSpan(taskName) {
     const newTask = document.createElement("span");
     newTask.innerText = taskName;
@@ -118,3 +120,19 @@ function addTaskLegend(color){
     taskContainer.appendChild(divLegend);
 }
 addTaskLegend("green");
+
+// Requisito 9
+function toggleTask() {
+    const task = document.querySelector(".task");
+    task.addEventListener("click", function(event) {
+        const taskSelected = document.querySelector(".selected");
+        if(taskSelected === null){
+            event.target.className = "task selected";
+
+        } else {
+            event.target.className = "task";
+            
+        }
+    })
+}
+toggleTask();
